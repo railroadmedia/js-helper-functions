@@ -1,0 +1,25 @@
+{
+  "name": "js-helper-functions",
+  "version": "1.0.0",
+  "description": "Helper functions for Vuesora and Musora Center",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://musoradev:299c056efdb92ebd35f0b76fbb3a257ede0abda1@github.com/railroadmedia/js-helper-functions.git"
+  },
+  "author": "Curtis Conway",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/railroadmedia/js-helper-functions/issues"
+  },
+  "homepage": "https://github.com/railroadmedia/js-helper-functions#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-jest": "^24.1.0",
+    "jest": "^24.1.0"
+  }
+}
