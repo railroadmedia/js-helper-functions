@@ -122,7 +122,8 @@ export default {
             'resource_name',
             'sheet_music_image_url',
             'chapter_description',
-            'chapter_timecode'
+            'chapter_timecode',
+            'key_pitch_type'
         ].indexOf(key) !== -1;
     },
 
