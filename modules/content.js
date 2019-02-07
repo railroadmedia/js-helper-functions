@@ -5,14 +5,15 @@ export default {
      * Loop through every post in a content response and flatten each one
      *
      * @param {array} content_posts - the results array returned from the endpoint
+     * @param {boolean} onlyReturnValue - only return the value of the field, no position or id
      * @returns {array} - The new array of flattened objects
      */
-    flattenContent(content_posts){
+    flattenContent(content_posts, onlyReturnValue = false){
         let flattened_posts = [];
 
         content_posts.forEach(post => {
             flattened_posts.push(
-                this.flattenContentObject(post)
+                this.flattenContentObject(post, onlyReturnValue)
             );
         });
 
@@ -23,19 +24,21 @@ export default {
      * Flatten a content objects fields and datum
      *
      * @param {array} post - the post to flatten
+     * @param {boolean} onlyReturnValue
      * @returns {array} - The new array of flattened objects
      */
-    flattenContentObject(post){
-        return this.flattenContentObjectFields(post);
+    flattenContentObject(post, onlyReturnValue = false){
+        return this.flattenContentObjectFields(post, onlyReturnValue);
     },
 
     /**
      * Flatten a content object
      *
      * @param {object} post - the results array returned from the endpoint
+     * @param {boolean} onlyReturnValue
      * @returns {array} - The new array of flattened objects
      */
-    flattenContentObjectFields(post){
+    flattenContentObjectFields(post, onlyReturnValue){
         let this_post = Utils.createObjectCopy(post);
 
         this_post.original = Utils.createObjectCopy(post);
@@ -45,14 +48,74 @@ export default {
         this_post.duplicates = [];
 
         this_post['fields'].forEach(field => {
-            this.createOrPushArray(field.key, field.value, field.id, field.position, this_post);
+            this.createOrPushArray(field.key, field.value, field.id, field.position, this_post, onlyReturnValue);
         });
 
         this_post['data'].forEach(data => {
-            this.createOrPushArray(data.key, data.value, data.id, data.position, this_post);
+            this.createOrPushArray(data.key, data.value, data.id, data.position, this_post, onlyReturnValue);
         });
 
         return this_post;
+    },
+
+    /**
+     * Flatten the filters returned from railcontent
+     *
+     * @param {object} filter_options - the filter_options object returned by railcontent
+     * @returns {Object} - The new flattened object
+     */
+    flattenFilters(filter_options){
+        let keys = Object.keys(filter_options);
+        let filter_map = {
+            artist: [],
+            bpm: [],
+            difficulty: [],
+            instructor: [],
+            style: [],
+            topic: [],
+            key: [],
+            key_pitch_type: []
+        };
+
+        keys.forEach(key => {
+
+            // Instructors need to have the name as the label but their id as the value,
+            // So it makes sense to map every array as a key/value pair
+            if(key === 'instructor'){
+                let instructor_array = this.flattenContent([filter_options[key]])[0];
+
+                instructor_array.forEach(filter => {
+
+                    filter_map[key].push({
+                        key: filter['name'],
+                        value: filter['id']
+                    });
+                })
+            }
+            else {
+                for(let i = 0; i < filter_options[key].length; i++){
+                    // Some of the legacy data can give us duplicate keys,
+                    // Since we can't avoid this we gotta check whether or not
+                    // We've added the key already
+                    let map_exists = filter_map[key] != null;
+                    let value_exists;
+                    if(map_exists){
+                        value_exists = filter_map[key].filter(map =>
+                            map.value === filter_options[key][i]
+                        ).length > 0;
+
+                        if(!value_exists){
+                            filter_map[key].push({
+                                key: filter_options[key][i],
+                                value: filter_options[key][i]
+                            });
+                        }
+                    }
+                }
+            }
+        });
+
+        return filter_map;
     },
 
     /**
@@ -64,9 +127,10 @@ export default {
      * @param id - the id of the datum or field property
      * @param position - the position property on the field/data
      * @param target - the target key you wish to create a value at or push to
+     * @param {boolean} onlyReturnValue
      */
-    createOrPushArray(key, value, id, position, target){
-        let this_value = {
+    createOrPushArray(key, value, id, position, target, onlyReturnValue){
+        let this_value = onlyReturnValue ? value : {
             value: value,
             id: id,
             position: position
