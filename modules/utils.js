@@ -346,5 +346,70 @@ export default {
             'Saskatchewan',
             'Yukon',
         ];
-    }
+    },
+
+    /**
+     * Trigger an event on a specific DOM element
+     *
+     * @param el - The element to dispatch the event on
+     * @param eventType - The name of the event
+     * @param detail - Optional paylod to pass with the event
+     * @returns {Event} - the a custom event with the name specified at invocation
+     */
+    triggerEvent: (el, eventType, detail) => el.dispatchEvent(new CustomEvent(eventType, { detail })),
+
+    /**
+     * Parse xp values as abbreviations rather than their total amount
+     *
+     * @returns {String|Number} - the parsed value
+     */
+    abbreviateNumberValue(number){
+        if(number >= 100000 && number < 1000000){
+            return Math.round(number / 1000) + 'K';
+        }
+        else if(number >= 1000000){
+            return Math.round(number / 1000000).toFixed(1) + 'M';
+        }
+
+        return number;
+    },
+
+    /**
+     * Format a number with commas separating the thousands.
+     *
+     * @returns {string} - A numeric string with commas
+     */
+    formatNumbersWithCommas(value){
+        return Number(value).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    },
+
+    /**
+     * Get the current width of the scrollbar on the page
+     *
+     * @returns {String|Number}
+     */
+    getScrollBarWidth(){
+        if (typeof document === 'undefined') {
+            return 0
+        }
+
+        const body = document.body;
+        const box = document.createElement('div');
+
+        let boxStyle = box.style;
+        let width;
+
+        boxStyle.position = 'absolute';
+        boxStyle.top = boxStyle.left = '-9999px';
+        boxStyle.width = boxStyle.height = '100px';
+        boxStyle.overflow = 'scroll';
+
+        body.appendChild(box);
+
+        width = box.offsetWidth - box.clientWidth;
+
+        body.removeChild(box);
+
+        return width;
+    },
 }

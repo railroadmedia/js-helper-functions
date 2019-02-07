@@ -83,3 +83,68 @@ describe('provinces', () => {
         expect(provinces.length).toBeGreaterThan(0)
     })
 });
+
+describe('triggerEvent', () => {
+
+    it('triggers an event on a specified dom element', () => {
+        document.body.innerHTML = '<div><button id="button"></div>';
+        const button = document.getElementById('button');
+        let clicked = false;
+
+        button.addEventListener('click', () => {
+            clicked = true;
+        });
+
+        Utils.triggerEvent(button, 'click');
+
+        expect(clicked).toBe(true);
+    });
+
+});
+
+describe('abbreviateNumberValue', () => {
+
+    it('abbreviates a number value above 100 thousand and below 1 million as "100K"', () => {
+        const number = Utils.abbreviateNumberValue(100000);
+
+        expect(number).toBe('100K');
+    });
+
+    it('abbreviates any number above 1 million as "1M"', () => {
+        const number = Utils.abbreviateNumberValue(1000000);
+
+        expect(number).toBe('1.0M');
+    });
+
+    it('returns the input if its any other value', () => {
+        const inputs = ['10', 10, null, undefined, {}, []];
+
+        inputs.forEach(input => {
+            const result = Utils.abbreviateNumberValue(input);
+
+            expect(result).toBe(result);
+        });
+    });
+});
+
+describe('formatNumbersWithCommas', () => {
+
+    it('returns a large number as a string with comma separators', () => {
+        const thousand = Utils.formatNumbersWithCommas(1000);
+        const tenThousand = Utils.formatNumbersWithCommas(10000);
+        const hundredThousand = Utils.formatNumbersWithCommas(100000);
+        const million = Utils.formatNumbersWithCommas(1000000);
+
+        expect(thousand).toBe('1,000');
+        expect(tenThousand).toBe('10,000');
+        expect(hundredThousand).toBe('100,000');
+        expect(million).toBe('1,000,000');
+    });
+});
+
+describe('getScrollBarWidth', () => {
+    const result = Utils.getScrollBarWidth();
+
+    // Result in the test environment will always be 0
+    expect(result).toBe(0);
+});
