@@ -82,7 +82,7 @@ export default {
             // Instructors need to have the name as the label but their id as the value,
             // So it makes sense to map every array as a key/value pair
             if(key === 'instructor'){
-                let instructor_array = this.flattenContent([filter_options[key]])[0];
+                let instructor_array = this.flattenContent(filter_options[key]);
 
                 instructor_array.forEach(filter => {
 
