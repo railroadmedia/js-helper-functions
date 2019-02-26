@@ -140,11 +140,11 @@ export default {
         // So we need to keep running this method to flatten that object aswell
         if(typeof value === 'object' && value !== null){
             value['fields'].forEach(field => {
-                this.createOrPushArray(field.key, field.value, field.id, field.position, this_value, key === 'instructor');
+                this.createOrPushArray(field.key, field.value, field.id, field.position, this_value, onlyReturnValue);
             });
 
             value['data'].forEach(data => {
-                this.createOrPushArray(data.key, data.value, data.id, data.position, this_value, key === 'instructor');
+                this.createOrPushArray(data.key, data.value, data.id, data.position, this_value, onlyReturnValue);
             });
         }
 

@@ -143,8 +143,11 @@ describe('formatNumbersWithCommas', () => {
 });
 
 describe('getScrollBarWidth', () => {
-    const result = Utils.getScrollBarWidth();
 
-    // Result in the test environment will always be 0
-    expect(result).toBe(0);
+    it('returns 0 in a test environment', () => {
+        const result = Utils.getScrollBarWidth();
+
+        // Result in the test environment will always be 0
+        expect(result).toBe(0);
+    });
 });
