@@ -166,7 +166,9 @@ export default {
                     target[key] = this_value;
                 }
                 else {
-                    target.duplicates.push(key);
+                    target.duplicates
+                        ? target.duplicates.push(key)
+                        : target.duplicates = [key];
                 }
             }
         }
