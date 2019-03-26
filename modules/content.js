@@ -470,7 +470,9 @@ export default {
             'sonor-drums',
             'paiste-cymbals',
             '25-days-of-christmas',
-            'rhythms-from-another-planet'
+            'rhythms-from-another-planet',
+            'namm-2019',
+            'entertainment',
         ];
     },
 }
