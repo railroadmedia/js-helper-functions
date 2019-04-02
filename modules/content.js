@@ -369,6 +369,12 @@ export default {
                 brands: ['drumeo'],
             },
             {
+                type: 'entertainment',
+                label: 'Entertainment',
+                icon: 'icon-shows',
+                brands: ['guitareo'],
+            },
+            {
                 type: 'assignment',
                 label: 'Assignment',
                 icon: 'icon-metronome',
