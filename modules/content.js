@@ -48,11 +48,11 @@ export default {
         this_post.duplicates = [];
 
         this_post['fields'].forEach(field => {
-            this.createOrPushArray(field.key, field.value, field.id, field.position, this_post, onlyReturnValue);
+            this.createOrPushArray(field.key, field.value, field.id, field.position, this_post, onlyReturnValue, 'field');
         });
 
         this_post['data'].forEach(data => {
-            this.createOrPushArray(data.key, data.value, data.id, data.position, this_post, onlyReturnValue);
+            this.createOrPushArray(data.key, data.value, data.id, data.position, this_post, onlyReturnValue, 'data');
         });
 
         return this_post;
@@ -128,8 +128,9 @@ export default {
      * @param position - the position property on the field/data
      * @param target - the target key you wish to create a value at or push to
      * @param {boolean} onlyReturnValue
+     * @param dataOrField
      */
-    createOrPushArray(key, value, id, position, target, onlyReturnValue){
+    createOrPushArray(key, value, id, position, target, onlyReturnValue, dataOrField){
         let this_value = onlyReturnValue ? value : {
             value: value,
             id: id,
@@ -140,11 +141,11 @@ export default {
         // So we need to keep running this method to flatten that object aswell
         if(typeof value === 'object' && value !== null){
             value['fields'].forEach(field => {
-                this.createOrPushArray(field.key, field.value, field.id, field.position, this_value, key === 'instructor');
+                this.createOrPushArray(field.key, field.value, field.id, field.position, this_value, key === 'instructor', 'field');
             });
 
             value['data'].forEach(data => {
-                this.createOrPushArray(data.key, data.value, data.id, data.position, this_value, key === 'instructor');
+                this.createOrPushArray(data.key, data.value, data.id, data.position, this_value, key === 'instructor', 'data');
             });
         }
 
@@ -421,11 +422,11 @@ export default {
      * @returns {array}
      */
     getTypesWithChildrenByBrand(brand = 'drumeo'){
-        const alwaysHasChildren = ['course', 'learning-path', 'pack', 'pack-bundle', 'semester-pack'];
+        const alwaysHasChildren = ['course', 'unit', 'learning-path', 'pack', 'pack-bundle', 'semester-pack'];
         const types =  {
             drumeo: alwaysHasChildren,
             guitareo: [...alwaysHasChildren, 'play-along', 'song'],
-            pianote: [...alwaysHasChildren, 'chord-and-scale'],
+            pianote: [...alwaysHasChildren, 'song'],
             recordeo: alwaysHasChildren
         };
 
