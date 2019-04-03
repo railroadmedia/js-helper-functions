@@ -140,11 +140,11 @@ export default {
         // So we need to keep running this method to flatten that object aswell
         if(typeof value === 'object' && value !== null){
             value['fields'].forEach(field => {
-                this.createOrPushArray(field.key, field.value, field.id, field.position, this_value, onlyReturnValue);
+                this.createOrPushArray(field.key, field.value, field.id, field.position, this_value, key === 'instructor');
             });
 
             value['data'].forEach(data => {
-                this.createOrPushArray(data.key, data.value, data.id, data.position, this_value, onlyReturnValue);
+                this.createOrPushArray(data.key, data.value, data.id, data.position, this_value, key === 'instructor');
             });
         }
 
@@ -166,9 +166,23 @@ export default {
                     target[key] = this_value;
                 }
                 else {
-                    target.duplicates
-                        ? target.duplicates.push(key)
-                        : target.duplicates = [key];
+                    if(Array.isArray(target.duplicates)){
+                        target.duplicates.push({
+                            key: key,
+                            value: value,
+                            id: id,
+                            type: dataOrField
+                        });
+                    }
+                    else {
+                        // If the duplicates array doesn't exist yet we need to make it
+                        target.duplicates = [{
+                            key: key,
+                            value: value,
+                            id: id,
+                            type: dataOrField
+                        }];
+                    }
                 }
             }
         }
