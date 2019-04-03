@@ -369,6 +369,18 @@ export default {
                 brands: ['drumeo'],
             },
             {
+                type: 'namm-2019',
+                label: 'NAMM 2019',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
+                type: 'tama-drums',
+                label: 'Tama Drums',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
                 type: 'entertainment',
                 label: 'Entertainment',
                 icon: 'icon-shows',
@@ -419,7 +431,8 @@ export default {
             'play-along-part': 'play-along',
             'pack-bundle': 'pack',
             'pack-bundle-lesson': 'pack-bundle',
-            'semester-pack-lesson': 'semester-pack'
+            'semester-pack-lesson': 'semester-pack',
+            'unit-part': 'unit',
         }[childType];
     },
 
@@ -479,6 +492,21 @@ export default {
             'rhythms-from-another-planet',
             'namm-2019',
             'entertainment',
+            'tama-drums',
+        ];
+    },
+
+    /**
+     * Get a list of all student focus types
+     *
+     * @returns {array}
+     */
+    studentFocus(){
+        return [
+            'quick-tips',
+            'student-review',
+            'question-and-answer',
+            'boot-camps',
         ];
     },
 }
