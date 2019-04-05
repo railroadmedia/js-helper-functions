@@ -9,15 +9,9 @@ export default {
      * @returns {array} - The new array of flattened objects
      */
     flattenContent(content_posts, onlyReturnValue = false){
-        let flattened_posts = [];
-
-        content_posts.forEach(post => {
-            flattened_posts.push(
-                this.flattenContentObject(post, onlyReturnValue)
-            );
+        return content_posts.map(post => {
+            return this.flattenContentObject(post, onlyReturnValue);
         });
-
-        return flattened_posts;
     },
 
     /**
@@ -39,7 +33,7 @@ export default {
      * @returns {array} - The new array of flattened objects
      */
     flattenContentObjectFields(post, onlyReturnValue){
-        let this_post = Utils.createObjectCopy(post);
+        let this_post = post;
 
         this_post.original = Utils.createObjectCopy(post);
         // Map the permissions to just return an array of IDs
