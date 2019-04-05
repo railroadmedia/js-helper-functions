@@ -273,7 +273,7 @@ export default {
                 type: 'question-and-answer',
                 label: 'Q & A',
                 icon: 'icon-student-focus',
-                brands: ['recordeo'],
+                brands: ['recordeo', 'pianote'],
             },
             {
                 type: 'student-review',
