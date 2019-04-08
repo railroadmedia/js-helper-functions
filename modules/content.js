@@ -273,13 +273,13 @@ export default {
                 type: 'question-and-answer',
                 label: 'Q & A',
                 icon: 'icon-student-focus',
-                brands: ['recordeo', 'pianote'],
+                brands: ['drumeo', 'recordeo', 'pianote'],
             },
             {
                 type: 'student-review',
                 label: 'Student Review',
                 icon: 'icon-student-focus',
-                brands: ['recordeo'],
+                brands: ['recordeo', 'pianote'],
             },
             {
                 type: 'gear-guides',
@@ -297,13 +297,13 @@ export default {
                 type: 'boot-camps',
                 label: 'Boot Camps',
                 icon: 'icon-shows',
-                brands: ['drumeo'],
+                brands: ['drumeo', 'pianote'],
             },
             {
                 type: 'quick-tips',
                 label: 'Quick Tips',
                 icon: 'icon-shows',
-                brands: ['drumeo'],
+                brands: ['drumeo', 'pianote'],
             },
             {
                 type: 'podcasts',
