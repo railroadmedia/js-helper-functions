@@ -216,6 +216,12 @@ export default {
                 brands: ['drumeo', 'guitareo', 'pianote', 'recordeo'],
             },
             {
+                type: 'unit',
+                label: 'Unit',
+                icon: 'icon-courses',
+                brands: ['pianote'],
+            },
+            {
                 type: 'song',
                 label: 'Song',
                 icon: 'icon-songs',
