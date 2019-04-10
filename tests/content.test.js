@@ -59,7 +59,7 @@ describe('flattenContentObject', () => {
         const result = Content.flattenContent(testContent);
 
         expect(result[0]).toHaveProperty('name', 'test_1');
-        expect(result[0]).toHaveProperty('duplicates', ['field_1', 'data_1']);
+        expect(result[0]).toHaveProperty('duplicates');
     });
 });
 
