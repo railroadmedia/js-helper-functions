@@ -198,7 +198,8 @@ export default {
             'sheet_music_image_url',
             'chapter_description',
             'chapter_timecode',
-            'key_pitch_type'
+            'key_pitch_type',
+            'style',
         ].indexOf(key) !== -1;
     },
 
