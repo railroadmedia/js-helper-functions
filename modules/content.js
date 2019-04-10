@@ -509,6 +509,7 @@ export default {
             'namm-2019',
             'entertainment',
             'tama-drums',
+            'question-and-answer',
         ];
     },
 
