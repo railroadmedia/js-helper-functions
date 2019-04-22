@@ -1,4 +1,5 @@
 import { Utils } from '../index';
+import { Content } from '../index';
 
 describe('createObjectCopy', () => {
     it('creates a proper object copy and not a reference in memory', () => {
@@ -149,5 +150,35 @@ describe('getScrollBarWidth', () => {
 
         // Result in the test environment will always be 0
         expect(result).toBe(0);
+    });
+});
+
+describe('getThemeColorByContentType', () => {
+
+    it('returns "show" for all show types', () => {
+        Content.shows().forEach(show => {
+            const themeColor = Utils.getThemeColorByContentType(show);
+
+            expect(themeColor).toBe('show');
+        });
+    });
+
+    it('returns the top level content type string with no "-bundle -part -lesson" suffixes', () => {
+        // Get all top level types without shows
+        const topLevelTypes = Content.topLevelContentTypes()
+            .map(topLevelType => topLevelType.type)
+            .filter(type => Content.shows().indexOf(type) === -1);
+
+        // Check if the function takes the input and strips the suffixes for every type
+        topLevelTypes.forEach(type => {
+            const contentTypeStringToMatch = type
+                .replace(/-lesson/g)
+                .replace(/-part/g)
+                .replace(/-bundle/g);
+
+            const themeColor = Utils.getThemeColorByContentType(type);
+
+            expect(themeColor).toBe(contentTypeStringToMatch);
+        })
     });
 });

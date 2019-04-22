@@ -1,3 +1,5 @@
+import Content from './content';
+
 export default {
     /**
      * Create a copy of an object rather than a reference
@@ -411,5 +413,19 @@ export default {
         body.removeChild(box);
 
         return width;
+    },
+
+    /**
+     * Get the theme color for a content type by it's type string
+     *
+     * @returns {String}
+     */
+    getThemeColorByContentType(type){
+        let _type = type
+            .replace(/-lesson/g)
+            .replace(/-part/g)
+            .replace(/-bundle/g);
+
+        return Content.shows().indexOf(_type) !== -1 ? 'show' : _type;
     },
 }
