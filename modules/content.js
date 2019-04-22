@@ -397,6 +397,12 @@ export default {
                 brands: ['drumeo'],
             },
             {
+                type: 'student-collaborations',
+                label: 'Student Collaborations',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
                 type: 'entertainment',
                 label: 'Entertainment',
                 icon: 'icon-shows',
@@ -510,6 +516,7 @@ export default {
             'entertainment',
             'tama-drums',
             'question-and-answer',
+            'student-collaborations',
         ];
     },
 
