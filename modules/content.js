@@ -517,6 +517,7 @@ export default {
             'tama-drums',
             'question-and-answer',
             'student-collaborations',
+            'the-polyrhythms-of',
         ];
     },
 
