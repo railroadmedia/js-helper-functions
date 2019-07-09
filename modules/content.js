@@ -403,8 +403,8 @@ export default {
                 brands: ['drumeo'],
             },
             {
-                type: 'the-polyrhythms-of',
-                label: 'The Polyrhythms Of',
+                type: 'camp-drumeo-ah',
+                label: 'Camp Drumeo-Ah',
                 icon: 'icon-shows',
                 brands: ['drumeo'],
             },
@@ -523,7 +523,7 @@ export default {
             'tama-drums',
             'question-and-answer',
             'student-collaborations',
-            'the-polyrhythms-of',
+            'camp-drumeo-ah',
         ];
     },
 
