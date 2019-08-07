@@ -410,7 +410,7 @@ export default {
             },
             {
                 type: 'ha-oemurd-pmac',
-                label: 'Camp Drumeo-Ah',
+                label: 'Ha-Oemurd-Pmac',
                 icon: 'icon-shows',
                 brands: ['drumeo'],
             },
