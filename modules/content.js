@@ -409,6 +409,12 @@ export default {
                 brands: ['drumeo'],
             },
             {
+                type: 'ha-oemurd-pmac',
+                label: 'Camp Drumeo-Ah',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
                 type: 'entertainment',
                 label: 'Entertainment',
                 icon: 'icon-shows',
@@ -524,6 +530,7 @@ export default {
             'question-and-answer',
             'student-collaborations',
             'camp-drumeo-ah',
+            'ha-oemurd-pmac',
         ];
     },
 
