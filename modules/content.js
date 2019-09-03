@@ -415,6 +415,18 @@ export default {
                 brands: ['drumeo'],
             },
             {
+                type: 'diy-drum-experiments',
+                label: 'DIY Drum Experiments',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
+                type: 'rhythmic-adventures-of-captain-carson',
+                label: 'Rhythmic Adventures of Captain Carson',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
                 type: 'entertainment',
                 label: 'Entertainment',
                 icon: 'icon-shows',
@@ -531,6 +543,8 @@ export default {
             'student-collaborations',
             'camp-drumeo-ah',
             'ha-oemurd-pmac',
+            'diy-drum-experiments',
+            'rhythmic-adventures-of-captain-carson',
         ];
     },
 
