@@ -200,6 +200,7 @@ export default {
             'chapter_timecode',
             'key_pitch_type',
             'style',
+            'bpm',
         ].indexOf(key) !== -1;
     },
 
