@@ -1,6 +1,6 @@
 {
   "name": "js-helper-functions",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "description": "Helper functions for Vuesora and Musora Center",
   "main": "index.js",
   "scripts": {
