@@ -1,7 +1,7 @@
 {
-  "name": "js-helper-functions",
-  "version": "1.0.32",
-  "description": "Helper functions for Vuesora and Musora Center",
+  "name": "@musora/helper-functions",
+  "version": "0.1.1",
+  "description": "Helper functions for MusoraJS",
   "main": "index.js",
   "scripts": {
     "test": "jest"
