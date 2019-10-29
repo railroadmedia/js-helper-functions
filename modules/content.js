@@ -428,6 +428,12 @@ export default {
                 brands: ['drumeo'],
             },
             {
+                type: 'in-rhythm',
+                label: 'In Rhythm',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
                 type: 'entertainment',
                 label: 'Entertainment',
                 icon: 'icon-shows',
@@ -546,6 +552,7 @@ export default {
             'ha-oemurd-pmac',
             'diy-drum-experiments',
             'rhythmic-adventures-of-captain-carson',
+            'in-rhythm',
         ];
     },
 
