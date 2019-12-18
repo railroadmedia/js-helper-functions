@@ -201,6 +201,7 @@ export default {
             'key_pitch_type',
             'style',
             'bpm',
+            'related_lesson',
         ].indexOf(key) !== -1;
     },
 
