@@ -201,6 +201,7 @@ export default {
             'key_pitch_type',
             'style',
             'bpm',
+            'related_lesson',
         ].indexOf(key) !== -1;
     },
 
@@ -460,7 +461,8 @@ export default {
      * @returns {array}
      */
     getTypesWithChildrenByBrand(brand = 'drumeo'){
-        const alwaysHasChildren = ['course', 'unit', 'learning-path', 'pack', 'pack-bundle', 'semester-pack'];
+        const alwaysHasChildren = ['course', 'unit', 'learning-path', 'learning-path-level',
+            'learning-path-course', 'pack', 'pack-bundle', 'semester-pack'];
         const types =  {
             drumeo: alwaysHasChildren,
             guitareo: [...alwaysHasChildren, 'play-along', 'song'],
@@ -486,6 +488,9 @@ export default {
             'pack-bundle-lesson': 'pack-bundle',
             'semester-pack-lesson': 'semester-pack',
             'unit-part': 'unit',
+            'learning-path-level': 'learning-path',
+            'learning-path-course': 'learning-path-level',
+            'learning-path-lesson': 'learning-path-course',
         }[childType];
     },
 
@@ -511,6 +516,8 @@ export default {
         type = type
             .replace(/-part/g, '') // Remove the -part
             .replace(/-bundle/g, '') // Remove the -bundle
+            .replace(/-level/g, '') // Remove the -level
+            .replace(/-course/g, '') // Remove the -course
             .replace(/-lesson/g, '');  // Remove -lesson
         const contentType = this.topLevelContentTypes().filter(content =>
             content.type === type
