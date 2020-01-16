@@ -576,4 +576,230 @@ export default {
             'boot-camps',
         ];
     },
+
+    /**
+     * Get a list of all searchable content types
+     *
+     * @returns {array}
+     */
+    searchableContentTypes() {
+        return [
+            {
+                type: 'recording',
+                label: 'Recording',
+                icon: 'icon-library',
+                brands: ['drumeo', 'guitareo', 'pianote', 'recordeo'],
+            },
+            {
+                type: 'course',
+                label: 'Course',
+                icon: 'icon-courses',
+                brands: ['drumeo', 'guitareo', 'pianote', 'recordeo'],
+            },
+            {
+                type: 'course-part',
+                label: 'Course Part',
+                icon: 'icon-library',
+                brands: ['drumeo', 'guitareo', 'pianote', 'recordeo'],
+            },
+            {
+                type: 'play-along',
+                label: 'Play-Along',
+                icon: 'icon-play-alongs',
+                brands: ['drumeo', 'guitareo', 'pianote'],
+            },
+            {
+                type: 'song',
+                label: 'Song',
+                icon: 'icon-songs',
+                brands: ['drumeo', 'guitareo', 'pianote', 'recordeo'],
+            },
+            {
+                type: 'student-focus',
+                label: 'Student Focus',
+                icon: 'icon-student-focus',
+                brands: ['drumeo'],
+            },
+            {
+                type: 'learning-path',
+                label: 'Learning Path',
+                icon: 'icon-learning-paths',
+                brands: ['drumeo', 'guitareo', 'pianote', 'recordeo'],
+            },
+            {
+                type: 'instructor',
+                label: 'Instructor',
+                icon: 'wc',
+                brands: ['drumeo', 'pianote', 'guitareo', 'recordeo'],
+            },
+            {
+                type: 'pack',
+                label: 'Pack',
+                icon: 'icon-packs',
+                brands: ['drumeo', 'pianote', 'guitareo'],
+            },
+            {
+                type: 'pack-bundle',
+                label: 'Pack Bundle',
+                icon: 'icon-shows',
+                brands: ['drumeo', 'guitareo', 'pianote', 'recordeo'],
+            },
+            {
+                type: 'pack-bundle-lesson',
+                label: 'Pack Bundle Lesson',
+                icon: 'icon-shows',
+                brands: ['drumeo', 'guitareo', 'pianote', 'recordeo'],
+            },
+            {
+                type: 'live',
+                label: 'Live',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
+                type: 'gear-guides',
+                label: 'Gear Guides',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
+                type: 'challenges',
+                label: 'Challenges',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
+                type: 'boot-camps',
+                label: 'Boot Camps',
+                icon: 'icon-shows',
+                brands: ['drumeo', 'pianote'],
+            },
+            {
+                type: 'quick-tips',
+                label: 'Quick Tips',
+                icon: 'icon-shows',
+                brands: ['drumeo', 'pianote'],
+            },
+            {
+                type: 'podcasts',
+                label: 'Podcasts',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
+                type: 'on-the-road',
+                label: 'On the road',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
+                type: 'behind-the-scenes',
+                label: 'Behind the Scenes',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
+                type: 'study-the-greats',
+                label: 'Study the Greats',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
+                type: 'solos',
+                label: 'Solos',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
+                type: 'performances',
+                label: 'Performances',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
+                type: 'exploring-beats',
+                label: 'Exploring Beats',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
+                type: 'independence-made-easy',
+                label: 'Independence Made Easy',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
+                type: 'sonor-drums',
+                label: 'Sonor Drums',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
+                type: '25-days-of-christmas',
+                label: '25 Days of Christmas',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
+                type: 'rhythms-from-another-planet',
+                label: 'Rhythms from Another Planet',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
+                type: 'paiste-cymbals',
+                label: 'Paiste Cymbals',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
+                type: 'namm-2019',
+                label: 'NAMM 2019',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
+                type: 'tama-drums',
+                label: 'Tama Drums',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
+                type: 'collaboration',
+                label: 'Collaboration',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
+                type: 'learning-path-lesson',
+                label: 'Learning Path Lesson',
+                icon: 'icon-learning-paths',
+                brands: ['drumeo', 'guitareo', 'pianote', 'recordeo'],
+            },
+            {
+                type: 'learning-path-course',
+                label: 'Learning Path Course',
+                icon: 'icon-learning-paths',
+                brands: ['drumeo', 'guitareo', 'pianote', 'recordeo'],
+            },
+            {
+                type: 'learning-path-level',
+                label: 'Learning Path Level',
+                icon: 'icon-learning-paths',
+                brands: ['drumeo', 'guitareo', 'pianote', 'recordeo'],
+            },
+        ];
+    },
+
+    /**
+     * Get a list of searchable content types by brand
+     *
+     * @param {string} brand
+     * @returns {array}
+     */
+    getBrandSearchableContentTypes(brand) {
+        return this.searchableContentTypes().filter(type =>
+            type.brands.indexOf(brand) !== -1
+        );
+    },
 }
