@@ -802,4 +802,63 @@ export default {
             type.brands.indexOf(brand) !== -1
         );
     },
+
+    /**
+     * Get a list of all content types that support statistics
+     *
+     * @returns {array}
+     */
+    statisticsContentTypes() {
+        return [
+            '25-days-of-christmas',
+            'behind-the-scenes',
+            'boot-camps',
+            'camp-drumeo-ah',
+            'challenges',
+            'chord-and-scale',
+            'course',
+            'course-part',
+            'diy-drum-experiments',
+            'edge-pack',
+            'entertainment',
+            'exploring-beats',
+            'gear-guides',
+            'ha-oemurd-pmac',
+            'in-rhythm',
+            'learning-path',
+            'learning-path-course',
+            'learning-path-lesson',
+            'learning-path-level',
+            'live',
+            'namm-2019',
+            'on-the-road',
+            'pack',
+            'pack-bundle',
+            'pack-bundle-lesson',
+            'paiste-cymbals',
+            'performances',
+            'play-along',
+            'play-along-part',
+            'podcasts',
+            'question-and-answer',
+            'quick-tips',
+            'recording',
+            'rhythmic-adventures-of-captain-carson',
+            'rhythms-from-another-planet',
+            'rudiment',
+            'semester-pack',
+            'semester-pack-lesson',
+            'solos',
+            'song',
+            'song-part',
+            'sonor-drums',
+            'student-collaborations',
+            'student-focus',
+            'student-review',
+            'study-the-greats',
+            'tama-drums',
+            'unit',
+            'unit-part',
+        ];
+    }
 }
