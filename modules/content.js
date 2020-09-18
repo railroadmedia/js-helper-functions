@@ -318,7 +318,7 @@ export default {
                 type: 'podcasts',
                 label: 'Podcasts',
                 icon: 'icon-shows',
-                brands: ['drumeo'],
+                brands: ['drumeo', 'pianote'],
             },
             {
                 type: 'on-the-road',
@@ -684,7 +684,7 @@ export default {
                 type: 'podcasts',
                 label: 'Podcasts',
                 icon: 'icon-shows',
-                brands: ['drumeo'],
+                brands: ['drumeo', 'pianote'],
             },
             {
                 type: 'on-the-road',
