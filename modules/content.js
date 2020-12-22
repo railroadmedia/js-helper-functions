@@ -219,6 +219,12 @@ export default {
                 brands: ['drumeo'],
             },
             {
+                type: 'coach-stream',
+                label: 'Coach Stream',
+                icon: 'icon-student-focus',
+                brands: ['drumeo'],
+            },
+            {
                 type: 'course',
                 label: 'Course',
                 icon: 'icon-courses',
@@ -593,6 +599,12 @@ export default {
             {
                 type: 'coach',
                 label: 'Coaches',
+                icon: 'icon-student-focus',
+                brands: ['drumeo'],
+            },
+            {
+                type: 'coach-stream',
+                label: 'Coach Stream',
                 icon: 'icon-student-focus',
                 brands: ['drumeo'],
             },
