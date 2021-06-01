@@ -462,7 +462,7 @@ export default {
                 type: 'instructor',
                 label: 'Instructor',
                 icon: 'wc',
-                brands: ['drumeo', 'pianote', 'guitareo', 'recordeo'],
+                brands: ['drumeo', 'pianote', 'guitareo', 'recordeo', 'singeo'],
             },
         ]
     },
