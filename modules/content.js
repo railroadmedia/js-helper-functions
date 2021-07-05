@@ -477,6 +477,7 @@ export default {
             'learning-path-course', 'pack', 'pack-bundle', 'semester-pack'];
         const types =  {
             drumeo: alwaysHasChildren,
+            singeo: alwaysHasChildren,
             guitareo: [...alwaysHasChildren, 'play-along', 'song'],
             pianote: [...alwaysHasChildren, 'song'],
             recordeo: alwaysHasChildren
