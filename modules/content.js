@@ -300,7 +300,7 @@ export default {
                 type: 'student-review',
                 label: 'Student Review',
                 icon: 'icon-student-focus',
-                brands: ['recordeo', 'pianote', 'pianote'],
+                brands: ['recordeo', 'pianote', 'pianote', 'singeo'],
             },
             {
                 type: 'gear-guides',
