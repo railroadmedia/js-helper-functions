@@ -294,13 +294,13 @@ export default {
                 type: 'question-and-answer',
                 label: 'Q & A',
                 icon: 'icon-student-focus',
-                brands: ['drumeo', 'recordeo', 'pianote'],
+                brands: ['drumeo', 'recordeo', 'pianote', 'singeo'],
             },
             {
                 type: 'student-review',
                 label: 'Student Review',
                 icon: 'icon-student-focus',
-                brands: ['recordeo', 'pianote'],
+                brands: ['recordeo', 'pianote', 'pianote'],
             },
             {
                 type: 'gear-guides',
