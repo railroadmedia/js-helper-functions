@@ -294,13 +294,13 @@ export default {
                 type: 'question-and-answer',
                 label: 'Q & A',
                 icon: 'icon-student-focus',
-                brands: ['drumeo', 'recordeo', 'pianote', 'singeo'],
+                brands: ['drumeo', 'recordeo', 'pianote', 'singeo', 'guitareo'],
             },
             {
                 type: 'student-review',
                 label: 'Student Review',
                 icon: 'icon-student-focus',
-                brands: ['recordeo', 'pianote', 'pianote', 'singeo'],
+                brands: ['recordeo', 'pianote', 'pianote', 'singeo', 'guitareo'],
             },
             {
                 type: 'gear-guides',
@@ -324,7 +324,7 @@ export default {
                 type: 'quick-tips',
                 label: 'Quick Tips',
                 icon: 'icon-shows',
-                brands: ['drumeo', 'pianote', 'singeo'],
+                brands: ['drumeo', 'pianote', 'singeo', 'guitareo'],
             },
             {
                 type: 'podcasts',
@@ -445,12 +445,6 @@ export default {
                 label: 'In Rhythm',
                 icon: 'icon-shows',
                 brands: ['drumeo'],
-            },
-            {
-                type: 'entertainment',
-                label: 'Entertainment',
-                icon: 'icon-shows',
-                brands: ['guitareo'],
             },
             {
                 type: 'assignment',
