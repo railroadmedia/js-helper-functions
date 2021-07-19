@@ -246,7 +246,7 @@ export default {
                 type: 'song-pdf',
                 label: 'Song PDF',
                 icon: 'icon-songs',
-                brands: ['singeo'],
+                brands: ['guitareo'],
             },
             {
                 type: 'play-along',
@@ -643,7 +643,7 @@ export default {
                 type: 'song-pdf',
                 label: 'Song PDF',
                 icon: 'icon-songs',
-                brands: ['singeo'],
+                brands: ['guitareo'],
             },
             {
                 type: 'student-focus',
