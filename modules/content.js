@@ -243,6 +243,12 @@ export default {
                 brands: ['drumeo', 'guitareo', 'pianote', 'recordeo', 'singeo'],
             },
             {
+                type: 'song-pdf',
+                label: 'Song PDF',
+                icon: 'icon-songs',
+                brands: ['singeo'],
+            },
+            {
                 type: 'play-along',
                 label: 'Play-Along',
                 icon: 'icon-play-alongs',
@@ -632,6 +638,12 @@ export default {
                 label: 'Song',
                 icon: 'icon-songs',
                 brands: ['drumeo', 'guitareo', 'pianote', 'recordeo', 'singeo'],
+            },
+            {
+                type: 'song-pdf',
+                label: 'Song PDF',
+                icon: 'icon-songs',
+                brands: ['singeo'],
             },
             {
                 type: 'student-focus',
