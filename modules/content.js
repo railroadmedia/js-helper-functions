@@ -399,6 +399,12 @@ export default {
                 brands: ['drumeo'],
             },
             {
+                type: 'history-of-electronic-drums',
+                label: 'History Of Electronic Drums',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
                 type: '25-days-of-christmas',
                 label: '25 Days of Christmas',
                 icon: 'icon-shows',
@@ -563,6 +569,7 @@ export default {
             'paiste-cymbals',
             '25-days-of-christmas',
             'rhythms-from-another-planet',
+            'history-of-electronic-drums',
             'namm-2019',
             'entertainment',
             'tama-drums',
@@ -778,6 +785,12 @@ export default {
                 brands: ['drumeo'],
             },
             {
+                type: 'history-of-electronic-drums',
+                label: 'History Of Electronic Drums',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
                 type: 'paiste-cymbals',
                 label: 'Paiste Cymbals',
                 icon: 'icon-shows',
@@ -876,6 +889,7 @@ export default {
             'recording',
             'rhythmic-adventures-of-captain-carson',
             'rhythms-from-another-planet',
+            'history-of-electronic-drums',
             'rudiment',
             'semester-pack',
             'semester-pack-lesson',
