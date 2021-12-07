@@ -405,6 +405,12 @@ export default {
                 brands: ['drumeo'],
             },
             {
+                type: 'backstage-secrets',
+                label: 'Backstage Secrets',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
                 type: '25-days-of-christmas',
                 label: '25 Days of Christmas',
                 icon: 'icon-shows',
@@ -570,6 +576,7 @@ export default {
             '25-days-of-christmas',
             'rhythms-from-another-planet',
             'history-of-electronic-drums',
+            'backstage-secrets',
             'namm-2019',
             'entertainment',
             'tama-drums',
@@ -791,6 +798,12 @@ export default {
                 brands: ['drumeo'],
             },
             {
+                type: 'backstage-secrets',
+                label: 'Backstage Secrets',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
                 type: 'paiste-cymbals',
                 label: 'Paiste Cymbals',
                 icon: 'icon-shows',
@@ -890,6 +903,7 @@ export default {
             'rhythmic-adventures-of-captain-carson',
             'rhythms-from-another-planet',
             'history-of-electronic-drums',
+            'backstage-secrets',
             'rudiment',
             'semester-pack',
             'semester-pack-lesson',
