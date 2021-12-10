@@ -66,6 +66,9 @@ export default {
             difficulty: [],
             instructor: [],
             style: [],
+            focus: [],
+            bands: [],
+            endorsements: [],
             topic: [],
             key: [],
             key_pitch_type: []
@@ -200,6 +203,9 @@ export default {
             'chapter_timecode',
             'key_pitch_type',
             'style',
+            'focus',
+            'bands',
+            'endorsements',
             'bpm',
             'related_lesson',
         ].indexOf(key) !== -1;
