@@ -1,6 +1,6 @@
 {
   "name": "@musora/helper-functions",
-  "version": "0.1.20",
+  "version": "0.1.21",
   "description": "Helper functions for MusoraJS",
   "main": "index.js",
   "type": "module",
