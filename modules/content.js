@@ -219,12 +219,6 @@ export default {
     topLevelContentTypes(){
         return [
             {
-                type: 'coach',
-                label: 'Coaches',
-                icon: 'icon-student-focus',
-                brands: ['drumeo'],
-            },
-            {
                 type: 'coach-stream',
                 label: 'Coach Stream',
                 icon: 'icon-student-focus',
@@ -617,12 +611,6 @@ export default {
      */
     searchableContentTypes() {
         return [
-            {
-                type: 'coach',
-                label: 'Coaches',
-                icon: 'icon-student-focus',
-                brands: ['drumeo', 'singeo'],
-            },
             {
                 type: 'coach-stream',
                 label: 'Coach Stream',
