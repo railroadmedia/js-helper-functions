@@ -397,8 +397,8 @@ export default {
                 brands: ['drumeo'],
             },
             {
-                type: 'history-of-electronic-drums',
-                label: 'History Of Electronic Drums',
+                type: 'the-history-of-electronic-drums',
+                label: 'The History Of Electronic Drums',
                 icon: 'icon-shows',
                 brands: ['drumeo'],
             },
@@ -784,8 +784,8 @@ export default {
                 brands: ['drumeo'],
             },
             {
-                type: 'history-of-electronic-drums',
-                label: 'History Of Electronic Drums',
+                type: 'the-history-of-electronic-drums',
+                label: 'The History Of Electronic Drums',
                 icon: 'icon-shows',
                 brands: ['drumeo'],
             },
