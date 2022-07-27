@@ -409,6 +409,12 @@ export default {
                 brands: ['drumeo'],
             },
             {
+                type: 'spotlight',
+                label: 'Spotlight',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
                 type: '25-days-of-christmas',
                 label: '25 Days of Christmas',
                 icon: 'icon-shows',
@@ -792,6 +798,12 @@ export default {
             {
                 type: 'backstage-secrets',
                 label: 'Backstage Secrets',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
+                type: 'spotlight',
+                label: 'Spotlight',
                 icon: 'icon-shows',
                 brands: ['drumeo'],
             },
