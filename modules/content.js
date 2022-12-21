@@ -247,6 +247,12 @@ export default {
                 brands: ['guitareo'],
             },
             {
+                type: 'song-tutorial',
+                label: 'Song Tutorial',
+                icon: 'icon-songs',
+                brands: ['pianote'],
+            },
+            {
                 type: 'play-along',
                 label: 'Play-Along',
                 icon: 'icon-play-alongs',
@@ -495,7 +501,7 @@ export default {
             drumeo: alwaysHasChildren,
             singeo: alwaysHasChildren,
             guitareo: [...alwaysHasChildren, 'play-along', 'song'],
-            pianote: [...alwaysHasChildren, 'song'],
+            pianote: [...alwaysHasChildren, 'song','song-tutorial'],
             recordeo: alwaysHasChildren
         };
 
@@ -520,6 +526,7 @@ export default {
             'learning-path-level': 'learning-path',
             'learning-path-course': 'learning-path-level',
             'learning-path-lesson': 'learning-path-course',
+            'song-tutorial-children': 'song-tutorial',
         }[childType];
     },
 
