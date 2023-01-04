@@ -500,8 +500,8 @@ export default {
         const types =  {
             drumeo: alwaysHasChildren,
             singeo: alwaysHasChildren,
-            guitareo: [...alwaysHasChildren, 'play-along', 'song'],
-            pianote: [...alwaysHasChildren, 'song','song-tutorial'],
+            guitareo: [...alwaysHasChildren, 'play-along'],
+            pianote: [...alwaysHasChildren, 'song-tutorial'],
             recordeo: alwaysHasChildren
         };
 
