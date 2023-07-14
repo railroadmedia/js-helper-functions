@@ -475,6 +475,12 @@ export default {
                 brands: ['drumeo'],
             },
             {
+                type: 'drum-fest-international-2022',
+                label: '2022 Drum Fest International',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
                 type: 'assignment',
                 label: 'Assignment',
                 icon: 'icon-metronome',
@@ -599,6 +605,7 @@ export default {
             'diy-drum-experiments',
             'rhythmic-adventures-of-captain-carson',
             'in-rhythm',
+            'drum-fest-international-2022',
         ];
     },
 
@@ -931,6 +938,7 @@ export default {
             'tama-drums',
             'unit',
             'unit-part',
+            'drum-fest-international-2022',
         ];
     }
 }
