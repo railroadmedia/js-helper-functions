@@ -505,6 +505,12 @@ export default {
                 icon: 'icon-courses',
                 brands: ['drumeo', 'guitareo', 'pianote', 'recordeo', 'singeo'],
             },
+            {
+                type: 'workout',
+                label: 'Workout',
+                icon: 'icon-courses',
+                brands: ['drumeo', 'guitareo', 'pianote', 'recordeo', 'singeo'],
+            },
         ]
     },
 
