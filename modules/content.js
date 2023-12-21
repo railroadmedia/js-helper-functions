@@ -201,6 +201,7 @@ export default {
             'sheet_music_image_url',
             'chapter_description',
             'chapter_timecode',
+            'chapter_thumbnail_url',
             'key_pitch_type',
             'style',
             'focus',
@@ -492,6 +493,24 @@ export default {
                 icon: 'wc',
                 brands: ['drumeo', 'pianote', 'guitareo', 'recordeo', 'singeo'],
             },
+            {
+                type: 'challenge',
+                label: 'Challenge',
+                icon: 'icon-courses',
+                brands: ['drumeo', 'guitareo', 'pianote', 'recordeo', 'singeo'],
+            },
+            {
+                type: 'challenge-part',
+                label: 'Challenge Part',
+                icon: 'icon-courses',
+                brands: ['drumeo', 'guitareo', 'pianote', 'recordeo', 'singeo'],
+            },
+            {
+                type: 'workout',
+                label: 'Workout',
+                icon: 'icon-courses',
+                brands: ['drumeo', 'guitareo', 'pianote', 'recordeo', 'singeo'],
+            },
         ]
     },
 
@@ -502,7 +521,7 @@ export default {
      */
     getTypesWithChildrenByBrand(brand = 'drumeo'){
         const alwaysHasChildren = ['course', 'unit', 'learning-path', 'learning-path-level',
-            'learning-path-course', 'pack', 'pack-bundle', 'semester-pack'];
+            'learning-path-course', 'pack', 'pack-bundle', 'semester-pack','challenge'];
         const types =  {
             drumeo: alwaysHasChildren,
             singeo: alwaysHasChildren,
@@ -533,6 +552,7 @@ export default {
             'learning-path-course': 'learning-path-level',
             'learning-path-lesson': 'learning-path-course',
             'song-tutorial-children': 'song-tutorial',
+            'challenge-part': 'challenge',
         }[childType];
     },
 
