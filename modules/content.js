@@ -73,6 +73,10 @@ export default {
             key: [],
             key_pitch_type: [],
             essentials: [],
+            creativity: [],
+            theory: [],
+            lifestyle: [],
+            gear: [],
         };
 
         keys.forEach(key => {
@@ -208,7 +212,11 @@ export default {
             'focus',
             'bpm',
             'related_lesson',
-            'essentials'
+            'essentials',
+            'creativity',
+            'theory',
+            'lifestyle',
+            'gear',
         ].indexOf(key) !== -1;
     },
 
