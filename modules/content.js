@@ -71,7 +71,8 @@ export default {
             endorsements: [],
             topic: [],
             key: [],
-            key_pitch_type: []
+            key_pitch_type: [],
+            essentials: [],
         };
 
         keys.forEach(key => {
@@ -207,6 +208,7 @@ export default {
             'focus',
             'bpm',
             'related_lesson',
+            'essentials'
         ].indexOf(key) !== -1;
     },
 
