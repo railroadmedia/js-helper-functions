@@ -521,6 +521,18 @@ export default {
                 icon: 'icon-courses',
                 brands: ['drumeo', 'guitareo', 'pianote', 'recordeo', 'singeo'],
             },
+            {
+                type: 'artist',
+                label: 'Artist',
+                icon: 'wc',
+                brands: ['drumeo', 'pianote', 'guitareo', 'recordeo', 'singeo'],
+            },
+            {
+                type: 'style',
+                label: 'Genre',
+                icon: 'wc',
+                brands: ['drumeo', 'pianote', 'guitareo', 'recordeo', 'singeo'],
+            },
         ]
     },
 
@@ -893,6 +905,18 @@ export default {
                 label: 'Learning Path Level',
                 icon: 'icon-learning-paths',
                 brands: ['drumeo', 'guitareo', 'pianote', 'recordeo', 'singeo'],
+            },
+            {
+                type: 'artist',
+                label: 'Artist',
+                icon: 'wc',
+                brands: ['drumeo', 'pianote', 'guitareo', 'recordeo', 'singeo'],
+            },
+            {
+                type: 'style',
+                label: 'Genre',
+                icon: 'wc',
+                brands: ['drumeo', 'pianote', 'guitareo', 'recordeo', 'singeo'],
             },
         ];
     },
