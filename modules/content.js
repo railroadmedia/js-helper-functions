@@ -906,6 +906,18 @@ export default {
                 icon: 'icon-learning-paths',
                 brands: ['drumeo', 'guitareo', 'pianote', 'recordeo', 'singeo'],
             },
+            {
+                type: 'artist',
+                label: 'Artist',
+                icon: 'wc',
+                brands: ['drumeo', 'pianote', 'guitareo', 'recordeo', 'singeo'],
+            },
+            {
+                type: 'style',
+                label: 'Genre',
+                icon: 'wc',
+                brands: ['drumeo', 'pianote', 'guitareo', 'recordeo', 'singeo'],
+            },
         ];
     },
 
