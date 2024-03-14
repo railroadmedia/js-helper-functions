@@ -291,7 +291,7 @@ export default {
                 type: 'pack',
                 label: 'Pack',
                 icon: 'icon-packs',
-                brands: ['drumeo', 'pianote', 'guitareo'],
+                brands: ['drumeo', 'pianote', 'guitareo','singeo'],
             },
             {
                 type: 'semester-pack',
