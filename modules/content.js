@@ -492,6 +492,12 @@ export default {
                 brands: ['drumeo'],
             },
             {
+                type: 'odd-times',
+                label: 'Odd Times With Aaron Edgar',
+                icon: 'icon-shows',
+                brands: ['drumeo'],
+            },
+            {
                 type: 'assignment',
                 label: 'Assignment',
                 icon: 'icon-metronome',
@@ -648,6 +654,7 @@ export default {
             'rhythmic-adventures-of-captain-carson',
             'in-rhythm',
             'drum-fest-international-2022',
+            'odd-times',
         ];
     },
 
@@ -993,6 +1000,7 @@ export default {
             'unit',
             'unit-part',
             'drum-fest-international-2022',
+            'odd-times'
         ];
     }
 }
